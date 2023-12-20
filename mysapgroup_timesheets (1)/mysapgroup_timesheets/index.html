@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <title>Responsive Navbar</title>
+    <style>
+        .navbar {
+            font-size: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .navbar-brand {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .navbar-nav {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            /* Adjust as needed */
+        }
+
+        .navbar-nav>li {
+            display: inline-block;
+            float: none;
+        }
+
+
+        .timesheet-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .timesheet-row input,
+        .timesheet-row select {
+            flex: 1;
+            margin-right: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            width: 100%;
+            /* Set a fixed width for Hours and Minutes */
+        }
+
+        .timesheet-row select {
+            width: auto;
+            /* Allow auto width for the select box */
+        }
+
+        .delete-button {
+            cursor: pointer;
+            margin-left: 10px;
+            color: red;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="#"> <img src="assets/img/logo-main.png" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">TIMESHEETS <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">EXPENSES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">DOCUMENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">REPORTS</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <h6>Time Period</h6>
+
+                    </div>
+                    <div class="col-md-3">
+
+                        <h6>Timesheet Status</h6>
+
+                    </div>
+                    <div class="col-md-3">
+                        <h6>Total Hours</h6>
+
+                    </div>
+                    <div class="col-md-3">
+                        <h6>Total Expenses</h6>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <h5>12/02/2023 - 12/09/2023</h5>
+
+                    </div>
+                    <div class="col-md-3">
+
+                        <h5> In Progress </h5>
+
+                    </div>
+                    <div class="col-md-3">
+                        <h5> 0.00 </h5>
+
+                    </div>
+                    <div class="col-md-3">
+                        <h5> 0.00 </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3> Days</h3>
+                        <table class="table">
+                            <thead>
+                                <tr class="thead-light">
+                                    <th>12/02/2023 - 12/08/2023</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <table class="table">
+                            <thead>
+                                <tr class="thead-light">
+                                    <th>Date</th>
+                                    <th>Hours</th>
+                                    <th>Total Hours</th>
+                                </tr>
+                            </thead>
+                            <!-- START of DAYS SECTION -->
+                            <tbody>
+
+                                <tr>
+                                    <td>MON 12/02/2023</td>
+                                    <td> 8.32 </td>
+                                    <td> 8.32 </td>
+                                </tr>
+
+                                <tr>
+                                    <td>TUE 12/03/2023</td>
+                                    <td> 8.32 </td>
+                                    <td> 8.32 </td>
+                                </tr>
+                                <tr>
+                                    <td>WED 12/04/2023</td>
+                                    <td> 8.32 </td>
+                                    <td> 8.32 </td>
+                                </tr>
+                                <tr>
+                                    <td>THU 12/05/2023</td>
+                                    <td> 8.32 </td>
+                                    <td> 8.32 </td>
+                                </tr>
+                                <tr>
+                                    <td>FRI 12/06/2023</td>
+                                    <td> 8.32 </td>
+                                    <td> 8.32 </td>
+                                </tr>
+                                <tr>
+                                    <td>SAT 12/07/2023</td>
+                                    <td> 8.32 </td>
+                                    <td> 8.32 </td>
+                                </tr>
+                                <tr>
+                                    <td>SUN 12/08/2023</td>
+                                    <td> 8.32 </td>
+                                    <td> 8.32 </td>
+                                </tr>
+
+
+                            </tbody>
+                            <!-- END of DAYS SECTION -->
+
+                        </table>
+
+                        <div class="datepicker">
+                            <h5>Choose Date</h5>
+                            <p>Add a datepicker</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h3> Hours</h3>
+                        <table class="table">
+                            <thead>
+                                <tr class="thead-light">
+                                    <th>Hours</th>
+                                    <th style="text-align: right;"> Minutes</th>
+                                    <th style="text-align: center;">&nbsp &nbsp &nbsp &nbsp Hours Type</th>
+                                    <th style="text-align: Left;">&nbsp Notes</th>
+                                    <th> </th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <!-- start of HOUR SECTION -->
+
+                        <table>
+                            <tbody id="timesheet-container">
+                                <tr class="timesheet-row">
+                                    <td><input type="number" placeholder="Hours"></td>
+                                    <td><input type="number" placeholder="Minutes"></td>
+                                    <td>
+                                        <select>
+                                            <option value="normal">Normal</option>
+                                            <option value="different">Different</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" placeholder="Notes"></td>
+                                    <td><span class="delete-button" onclick="deleteTimesheetRow(this)">❌</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- END of HOUR SECTION -->
+
+                        <br>
+                        <br>
+                        <button onclick="addTimesheetRow()">Add Block</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function addTimesheetRow() {
+            // Create a new timesheet row
+            var timesheetRow = document.createElement("tr");
+            timesheetRow.classList.add("timesheet-row");
+
+            // Create input fields
+            for (var i = 0; i < 4; i++) {
+                var input = document.createElement(i === 2 ? "select" : "input");
+                input.type = (i === 0 || i === 1) ? "number" : "text";
+                input.classList.add("form-control");
+
+                // Set placeholder text based on the field
+                switch (i) {
+                    case 0:
+                        input.placeholder = "Hours";
+                        break;
+                    case 1:
+                        input.placeholder = "Minutes";
+                        break;
+                    case 2:
+                        var option1 = document.createElement("option");
+                        option1.value = "normal";
+                        option1.text = "Normal";
+                        var option2 = document.createElement("option");
+                        option2.value = "different";
+                        option2.text = "Different";
+                        input.add(option1);
+                        input.add(option2);
+                        break;
+                    case 3:
+                        input.placeholder = "Notes";
+                        input.style.width = "100%"; // Set the width to 100%
+                        break;
+                }
+
+                // Create a cell for each input
+                var cell = document.createElement("td");
+                cell.appendChild(input);
+                timesheetRow.appendChild(cell);
+            }
+
+            // Create a delete button
+            var deleteButton = document.createElement("td");
+            deleteButton.classList.add("delete-button");
+            deleteButton.innerHTML = "<span onclick='deleteTimesheetRow(this)'>❌</span>";
+            timesheetRow.appendChild(deleteButton);
+
+            // Append the new timesheet row to the table
+            document.getElementById("timesheet-container").appendChild(timesheetRow);
+        }
+
+
+
+        function deleteTimesheetRow(button) {
+            // Find the parent row and remove it
+            var timesheetRow = button.parentNode.parentNode;
+            timesheetRow.parentNode.removeChild(timesheetRow);
+        }
+
+    </script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Pop-up FUnctionality -->
+
+
+
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+
+            <div class="container mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Actions</h5>
+
+                        <!-- Button 1: Notes -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notesModal">
+                            Notes <span id="notesCount"> (0)</span>
+                        </button>
+
+                        <!-- Button 2: Attachments -->
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#attachmentsModal">
+                            Attachments <span id="attachmentsCount"> (0)</span>
+                        </button>
+
+                        <!-- Button 3: Submit Timesheet -->
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#submitTimesheetModal">
+                            Submit Timesheet
+                        </button>
+
+                        <!-- Button 4: View Timesheet -->
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewTimesheetModal">
+                            View Timesheet
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- Modal 1: Notes Modal -->
+    <div class="modal fade" id="notesModal" tabindex="-1" role="dialog" aria-labelledby="notesModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="notesModalLabel">Notes</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea id="notesTextarea" class="form-control" rows="5"></textarea>
+                    <div id="notesDisplay"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="addNote()">Add Note</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Attachments Modal -->
+    <div class="modal fade" id="attachmentsModal" tabindex="-1" role="dialog" aria-labelledby="attachmentsModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="attachmentsModalLabel">Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="file" id="attachmentInput" multiple>
+                    <div id="attachmentsDisplay"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="uploadAttachments()">Upload</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Submit Timesheet Modal -->
+    <div class="modal fade" id="submitTimesheetModal" tabindex="-1" role="dialog" aria-labelledby="submitTimesheetModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="submitTimesheetModalLabel">Submit Timesheet</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>I certify the hours and expenses submitted are accurate and are in accordance with the consulting engagement requirements.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="acceptSubmission()">Accept</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: View Timesheet Modal -->
+    <div class="modal fade" id="viewTimesheetModal" tabindex="-1" role="dialog" aria-labelledby="viewTimesheetModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="viewTimesheetModalLabel">View Timesheet</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Option to print the whole page goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+        let notesCount = 0;
+        let attachmentsCount = 0;
+
+        function addNote() {
+            const noteText = document.getElementById('notesTextarea').value;
+            if (noteText.trim() !== "") {
+                notesCount++;
+                document.getElementById('notesCount').innerText = ` (${notesCount})`;
+                document.getElementById('notesDisplay').innerHTML += `<p>${notesCount}. ${noteText}</p>`;
+                document.getElementById('notesTextarea').value = "";
+            }
+        }
+
+        function uploadAttachments() {
+            const files = document.getElementById('attachmentInput').files;
+            if (files.length > 0) {
+                attachmentsCount += files.length;
+                document.getElementById('attachmentsCount').innerText = ` (${attachmentsCount})`;
+                const attachmentsDisplay = document.getElementById('attachmentsDisplay');
+                for (let i = 0; i < files.length; i++) {
+                    const fileURL = URL.createObjectURL(files[i]);
+                    attachmentsDisplay.innerHTML += `<p>${i + 1}. <a href="${fileURL}" download="${files[i].name}">${files[i].name}</a></p>`;
+                }
+                document.getElementById('attachmentInput').value = "";
+            }
+        }
+
+        function acceptSubmission() {
+            // Additional logic for accepting submission
+            alert('Timesheet submitted successfully.');
+            $('#submitTimesheetModal').modal('hide');
+        }
+
+    </script>
+    <br>
+    <br>
+    <br>
+
+
+</body>
+
+</html>
